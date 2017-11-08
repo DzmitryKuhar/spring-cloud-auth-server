@@ -1,0 +1,10 @@
+Auth server
+
+1)Get token
+curl -X POST client:secret@localhost:5001/uaa/oauth/token -d grant_type=password -d username=jose -d password=mypass
+
+2)Check token
+curl -X POST client:secret@localhost:5001/uaa/oauth/check_token -d token=ab3e71a9-fdff-4b5d-bac1-e30402dc1750
+
+3)Refresh token
+curl -X POST client:secret@localhost:5001/uaa/oauth/token -d grant_type=refresh_token -d refresh_token=a119bc34-34a4-479b-a76e-52165c08e269

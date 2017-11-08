@@ -21,7 +21,7 @@ apply plugin: 'java'
 apply plugin: 'org.springframework.boot'
 
 jar {
-    baseName = 'spring-cloud-config-server'
+    baseName = 'spring-cloud-auth-server'
     version = '0.0.1-SNAPSHOT'
 }
 
@@ -32,8 +32,10 @@ ext {
 }
 
 dependencies {
-    compile('org.springframework.cloud:spring-cloud-config-server')
+    compile('org.springframework.cloud:spring-cloud-starter-oauth2')
     compile('org.springframework.cloud:spring-cloud-starter-eureka')
+    compile('org.springframework.boot:spring-boot-starter-jdbc')
+    compile('org.postgresql:postgresql')
     testCompile('org.springframework.boot:spring-boot-starter-test')
 }
 
